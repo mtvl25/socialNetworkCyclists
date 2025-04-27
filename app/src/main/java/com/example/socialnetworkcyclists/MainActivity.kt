@@ -2,8 +2,11 @@ package com.example.socialnetworkcyclists
 
 
 import androidx.compose.foundation.layout.Row
-
-
+import androidx.compose.material3.Icon
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material3.FloatingActionButton // Necesario para tu FAB
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.*
 import android.os.Bundle
 import android.widget.Toolbar
@@ -20,7 +23,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -30,8 +32,15 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarColors
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -39,9 +48,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
+import com.example.socialnetworkcyclists.ui.login.ui.LoginScreen
+import com.example.socialnetworkcyclists.ui.login.ui.LoginViewModel
 
 
 class MainActivity : ComponentActivity() {
@@ -49,19 +61,36 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            ViewContainer()
+            SocialNetworkCyclistsTheme{
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    LoginScreen(LoginViewModel())
+                }
+            }
         }
     }
 }
 
 
-
+/*
 //@Preview
 @Composable
 fun ViewContainer(){
+    //Scaffold define la estructura de la app(Esqueleto)
     Scaffold(
+        //Contiene la la barra de navegacion superior
+        topBar = { Toolbar()},
 
-        content =  {Content()}
+        //Contiene EL contenido
+        content =  {Content()},
+
+        //Contiene un floating Action button que permite añadir rutas
+        floatingActionButton = {AddRoute()},
+
+        //Contiene la Barra de navegacion inferior
+        bottomBar = {Bottombar()},
     )
 }
 
@@ -70,7 +99,33 @@ fun ViewContainer(){
 @Preview
 @Composable
 fun Toolbar(){
-    TopAppBar(title = { Text("HOla Mathias"),backgroundColor=})
+    TopAppBar(
+        title = { Text("HOla Mathias")},
+    // Define los colores de la topbar
+        colors = TopAppBarDefaults.topAppBarColors(
+            containerColor = colorResource(id=R.color.top_app_bar_background),
+            titleContentColor = colorResource(id = R.color.top_app_bar_font),
+            )
+    )
+}
+
+
+@Composable
+fun Bottombar(){
+    BottomAppBar{
+        Text(text = "Bottom Bar")
+    }
+}
+
+*/
+
+
+/*
+@Composable
+fun AddRoute(){
+    FloatingActionButton(onClick = {}){
+        Icon(imageVector = Icons.Filled.Add, contentDescription = "Add route")
+    }
 }
 
 //@Preview(showBackground = true)
@@ -126,7 +181,7 @@ fun Content() {
             Text(text = "Ruta4" ,color=Color.White, modifier = Modifier.fillMaxWidth())
 
         }
-        /*
+
         item{
             LazyRow(
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -146,7 +201,8 @@ fun Content() {
             }
         }
 
-         */
+
     }
 
 }
+*/
