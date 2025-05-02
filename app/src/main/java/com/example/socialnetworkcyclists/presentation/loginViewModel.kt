@@ -1,4 +1,4 @@
-package com.example.socialnetworkcyclists.ui.login.ui
+package com.example.socialnetworkcyclists.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

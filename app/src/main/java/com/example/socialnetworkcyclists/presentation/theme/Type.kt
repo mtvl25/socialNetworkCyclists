@@ -1,4 +1,4 @@
-package com.example.socialnetworkcyclists.ui.theme
+package com.example.socialnetworkcyclists.presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
@@ -16,6 +16,7 @@ val SFProDisplay = FontFamily(
 )
 
 val SFProText = FontFamily(
+    Font(R.font.sf_pro_text_light,       FontWeight.Light),
     Font(R.font.sf_pro_text_regular,       FontWeight.Normal),
     Font(R.font.sf_pro_text_semibold,      FontWeight.SemiBold),
     Font(R.font.sf_pro_text_mediumitalic,        FontWeight.Normal)
@@ -60,6 +61,12 @@ val AppTypography = Typography(
         fontFamily = SFProDisplay,
         fontWeight  = FontWeight.SemiBold,
         fontSize    = 15.sp
+    ),
+
+    titleMedium=TextStyle(
+            fontFamily = SFProText,
+            fontWeight  = FontWeight.Light,
+            fontSize    = 20.sp
     )
     // Puedes añadir aquí titleLarge, titleMedium, labelMedium, etc.
 )

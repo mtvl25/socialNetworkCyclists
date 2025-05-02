@@ -1,4 +1,4 @@
-package com.example.socialnetworkcyclists.ui.theme
+package com.example.socialnetworkcyclists.presentation.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -22,7 +22,8 @@ private val DarkColorScheme: ColorScheme = darkColorScheme(
     surface       = InputBackground,
     onSurface     = TextPrimary,
     secondary     = LinkColor,
-    onSecondary   = TextPrimary
+    onSecondary   = TextPrimary,
+    onSurfaceVariant   = TextPrimary.copy(alpha = 0.5f),
 )
 
 // — Esquema claro —
@@ -34,7 +35,8 @@ private val LightColorScheme: ColorScheme = lightColorScheme(
     surface       = LightInputBackground,
     onSurface     = LightTextPrimary,
     secondary     = LightLinkColor,
-    onSecondary   = LightTextPrimary
+    onSecondary   = LightTextPrimary,
+
 )
 
 

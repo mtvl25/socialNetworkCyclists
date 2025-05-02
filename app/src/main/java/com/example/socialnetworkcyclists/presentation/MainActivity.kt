@@ -1,4 +1,4 @@
-package com.example.socialnetworkcyclists
+package com.example.socialnetworkcyclists.presentation
 
 
 
@@ -8,13 +8,11 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
-import com.example.socialnetworkcyclists.ui.theme.CyclistAppTheme
+import com.example.socialnetworkcyclists.presentation.theme.CyclistAppTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
-import com.example.socialnetworkcyclists.ui.login.ui.LoginScreen
-import com.example.socialnetworkcyclists.ui.login.ui.LoginViewModel
 
 
 class MainActivity : ComponentActivity() {

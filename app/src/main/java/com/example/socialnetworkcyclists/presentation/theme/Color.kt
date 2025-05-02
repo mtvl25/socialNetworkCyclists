@@ -1,4 +1,4 @@
-package com.example.socialnetworkcyclists.ui.theme
+package com.example.socialnetworkcyclists.presentation.theme
 import androidx.compose.ui.graphics.Color
 import androidx.compose.material3.ColorScheme
 
@@ -13,7 +13,7 @@ val Divider               = Color(0xFF494A4A) // líneas separadoras
 // Textos
 // ——————————————
 val TextPrimary           = Color(0xFFFFFFFF) // “Bienvenido de nuevo”, etiquetas en blanco
-val TextSecondary         = Color(0xFF888988) // subtítulos, “o continuar con”, placeholder
+val TextSecondary         = Color(0xFFFFFFFF) // subtítulos, “o continuar con”, placeholder
 val Placeholder           = TextSecondary   // color de hint/placeholder
 
 // ——————————————
@@ -27,14 +27,31 @@ val ButtonPrimaryText     = Color(0xFFFFFFFF) // texto blanco dentro del botón
 // ——————————————
 val LinkColor             = Color(0xFFEC3112) // “¿Olvidaste tu contraseña?”, “Regístrate”
 
+
+
+
 // ——————————————
 // Botones Sociales
 // ——————————————
-val AppleButtonBg         = Color(0xFFFFFFFF) // fondo blanco
-val AppleButtonText       = Color(0xFF000000) // texto e ícono negro
+// Variante blanca (Light Theme)
+val AppleButtonBgLight   = Color(0xFFFFFFFF)  // fondo blanco
+val AppleButtonTextLight = Color(0xFF000000)  // texto negro
 
-val GoogleButtonBg        = Color(0xFF222222) // fondo oscuro (igual que cajas de texto)
-val GoogleButtonText      = TextSecondary   // texto gris medio
+// Variante negra (Dark Theme)
+val AppleButtonBgDark    = Color(0xFFFFFFFF)  // fondo negro
+val AppleButtonTextDark  = Color(0xFF000000)  // texto blanco
+
+// ——————————————
+// Botón “Sign in with Google”
+// ——————————————
+// Variante clara (Light Theme)
+val GoogleButtonBgLight   = Color(0xFFFFFFFF)  // fondo blanco
+val GoogleButtonTextLight = Color(0xFF000000)  // texto negro
+
+// Variante tenue (Dark Theme)
+// gris muy suave tipo systemGray5 en iOS
+val GoogleButtonBgDark    = Color(0xFF2C2C2E)          // fondo gris oscuro
+val GoogleButtonTextDark  = Color(0x99FFFFFF)          // texto blanco al 60% de opacidad
 
 
 

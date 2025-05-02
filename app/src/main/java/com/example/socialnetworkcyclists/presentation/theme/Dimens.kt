@@ -1,4 +1,4 @@
-package com.example.socialnetworkcyclists.ui.theme
+package com.example.socialnetworkcyclists.presentation.theme
 
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -19,6 +19,7 @@ data class Dimens(
     val iconSizeMedium:       Dp = 32.dp,
     val iconSizeLarge:        Dp = 48.dp,
 
+
     // — Rellenos (padding) —
     val paddingSmall:         Dp = 8.dp,
     val paddingMedium:        Dp = 16.dp,
@@ -32,7 +33,12 @@ data class Dimens(
     // — Espaciadores —
     val spacerSmall:          Dp = 8.dp,
     val spacerMedium:         Dp = 16.dp,
-    val spacerLarge:          Dp = 24.dp
+    val spacerLarge:          Dp = 24.dp,
+
+ //Imagenes
+    val headerImageSizeSmall: Dp = 80.dp,   // tamaño pequeño (por ejemplo phones estrechos)
+    val headerImageSizeMedium: Dp = 120.dp,  // tamaño medio (phones estándar)
+    val headerImageSizeLarge: Dp = 250.dp,
 )
 
 /**
