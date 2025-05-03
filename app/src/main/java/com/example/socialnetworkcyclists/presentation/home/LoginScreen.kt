@@ -154,8 +154,12 @@ fun LoginScreen(
             modifier        = Modifier.fillMaxWidth(),
             onClick         = { /* acción Google Sign-In */ }
         )
+        Spacer(Modifier.height(CyclistAppTheme.dimens.spacerMedium))
+        SignupPrompt(onRegisterClick={ -> })
         Spacer(Modifier.height(CyclistAppTheme.dimens.spacerLarge))
-        SignupPrompt() {}
+        Spacer(Modifier.height(CyclistAppTheme.dimens.spacerLarge))
+        Spacer(Modifier.height(CyclistAppTheme.dimens.spacerLarge))
+        Spacer(Modifier.height(CyclistAppTheme.dimens.spacerLarge))
     }
 
     }

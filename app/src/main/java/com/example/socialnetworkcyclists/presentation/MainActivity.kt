@@ -1,7 +1,7 @@
 package com.example.socialnetworkcyclists.presentation
 
 
-
+import com.example.socialnetworkcyclists.presentation.home.LoginScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    LoginScreen(LoginViewModel())
+                    LoginScreen(onLogin = { _, _ -> })
                 }
             }
         }

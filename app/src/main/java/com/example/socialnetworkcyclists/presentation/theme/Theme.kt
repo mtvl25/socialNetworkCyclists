@@ -53,7 +53,7 @@ fun ProvideDimens(
 }
 @Composable
 fun CyclistAppTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    darkTheme: Boolean = true,
     windowSize: WindowWidthSizeClass = WindowWidthSizeClass.Compact,
     content: @Composable () -> Unit
 ) {
