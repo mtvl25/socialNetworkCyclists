@@ -1,7 +1,7 @@
 package com.example.socialnetworkcyclists.presentation
 
 
-import com.example.socialnetworkcyclists.presentation.home.LoginScreen
+import com.example.socialnetworkcyclists.presentation.login.LoginScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent

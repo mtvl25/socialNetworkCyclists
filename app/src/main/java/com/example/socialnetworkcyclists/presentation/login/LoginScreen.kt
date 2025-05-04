@@ -1,4 +1,4 @@
-package com.example.socialnetworkcyclists.presentation.home
+package com.example.socialnetworkcyclists.presentation.login
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
