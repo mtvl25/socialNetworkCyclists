@@ -1,0 +1,32 @@
+/*
+    private String name;
+    private int age;
+    private String typeOfCycling;
+    private String location;
+ */
+
+import presentation.UserUI.UserInputUI;
+public final class  UserRepository{
+
+
+
+    //Se encarga de CREAR un nuevo usuario
+    public static User createUser(String name,int age, String typeOfCycling, String location){
+        
+
+        
+        try{
+            // Create a new user object
+            User newUser= new User(name,age,typeOfCycling,location);
+            return newUser;
+        }catch(Exception e){
+            
+            return System.out.println(UserInputUI.ERROR_CREATING_USER);
+
+        }  
+    }
+
+    
+
+    
+}
